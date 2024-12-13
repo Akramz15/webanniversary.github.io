@@ -25,7 +25,6 @@ body {
 
 .screen.visible {
     display: block;
-    opacity: 1;
     transform: translateY(0);
 }
 
@@ -205,6 +204,20 @@ button[type="submit"]:hover {
     object-fit: contain; /* Menyesuaikan gambar tanpa terpotong */
 }
 
+.photo-item p {
+    max-width: 600px; /* Batas maksimal lebar teks */
+    margin: 20px auto; /* Pusatkan teks secara horizontal */
+    font-size: 18px; /* Ukuran font yang proporsional */
+    line-height: 1.8; /* Jarak antar baris untuk keterbacaan */
+    color: #ffffff; /* Warna teks putih */
+    text-align: justify; /* Membuat teks rata kanan dan kiri */
+    padding: 10px 15px; /* Ruang di sekitar teks */
+    background: rgba(0, 0, 0, 0.5); /* Latar belakang semi-transparan untuk keterbacaan */
+    border-radius: 12px; /* Sudut melengkung */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Efek bayangan lembut */
+}
+
+
 .single-photo {
     max-width: 50%; /* Batas lebar maksimum gambar */
     height: auto; /* Menjaga rasio aspek */
@@ -214,6 +227,23 @@ button[type="submit"]:hover {
     border-radius: 12px; /* Menambahkan sudut melengkung */
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Menambahkan efek bayangan */
 }
+
+.anniversary-message .message-box {
+    background-color: rgba(0, 0, 0, 0.5); /* Latar belakang transparan hitam */
+    color: white; /* Teks putih agar kontras dengan latar belakang */
+    padding: 20px; /* Memberikan jarak di dalam kotak */
+    border-radius: 10px; /* Membuat sudut kotak lebih lembut */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Memberikan bayangan halus */
+    margin-top: 50px; /* Memberikan jarak antara kotak dan elemen di atasnya */
+    margin-bottom: 25px; /* Memberikan jarak antara kotak dan elemen di bawahnya */
+}
+
+.anniversary-message p {
+    text-align: justify; /* Mengatur teks agar rata kiri dan kanan */
+    line-height: 1.4; /* Menambah jarak antar baris untuk kenyamanan membaca */
+}
+
+
 
 /* Styling untuk semua teks putih dengan efek shadow hitam */
 body, h1, h2, h3, h4, h5, h6, p, span {

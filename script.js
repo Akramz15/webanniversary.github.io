@@ -39,8 +39,8 @@ function checkFinishButton() {
 finishButton.addEventListener('click', () => {
     // Menampilkan konfirmasi menggunakan SweetAlert2
     Swal.fire({
-        title: 'Apakah Anda yakin?',
-        text: 'Anda akan menyelesaikan pengalaman ini.',
+        title: 'Apakah kamu yakin?',
+        text: 'kamu akan menyelesaikan perayaan ini.',
         icon: 'warning',
         showCancelButton: true, // Menampilkan tombol "Tidak"
         confirmButtonText: 'Selesai',

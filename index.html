@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Celebrate your special anniversary with a personalized interactive experience.">
+    <meta name="keywords" content="anniversary, love, celebration, special day, interactive project">
+    <meta name="author" content="Your Name">
+    <title>Anniversary Project</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- SweetAlert2 Library -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+</head>
+
+<body>
+    <!-- Welcome Screen -->
+    <section id="welcome-screen" class="screen visible">
+        <h1 class="anniversary-title">Happy Anniversary!</h1>
+
+        <!-- Background Selection Controls -->
+        <div id="background-controls" class="background-controls">
+            <h3>Pilih Latar Belakang:</h3>
+            <div class="background-options">
+                <button class="bg-button" data-bg="./img/foto_1.jpg" type="button">Background Image</button>
+                <button class="bg-button" data-bg="#f5deb3" type="button">Light Brown</button>
+                <button class="bg-button" data-bg="#ffb6c1" type="button">Pink</button>
+            </div>
+        </div>
+
+        <!-- Start Button -->
+        <button id="start-button" type="button">Mulai</button>
+    </section>
+
+    <!-- Slide 2 - Form untuk Tanggal Anniversary -->
+    <section id="input-screen" class="screen hidden">
+        <h1 class="anniversary-title-slide">Masukkan Tanggal Anniversary</h1>
+        <form id="date-form">
+            <input type="date" id="anniversary-date" name="anniversary-date" required aria-label="Anniversary Date">
+            <button type="submit">Kirim</button>
+        </form>
+        <p id="congratulation-message" class="hidden" aria-live="polite"></p>
+    </section>
+
+   <!-- Slide 3 - Celebration Screen -->
+<section id="celebration-screen" class="screen hidden">
+    <h2 class="anniversary-title-slide">Hi Sayang</h2>
+    <p>Ayo pilih yang mana dulu!</p>
+    <div class="choice-buttons">
+        <button id="choose-left-button" class="arrow-button" type="button">&#8592;</button>
+        <button id="choose-right-button" class="arrow-button" type="button">&#8594;</button>
+    </div>
+    <!-- Tombol Selesai -->
+    <button id="finish-button" type="button" class="hidden">Selesai</button>
+</section>
+
+
+    <!-- Left Choice Screen -->
+    <section id="left-slide" class="screen hidden">
+        <h2 class="anniversary-title-slide">You're Special</h2>
+        <article class="photo-container">
+            <img src="./img/foto_4.jpg" alt="Special Memory" class="single-photo">
+            <div class="anniversary-message">
+                <p>hi my woman, thank you for everything you have given me during this one year, many lessons from you that have changed everything to be close to the word perfect, a billion words of gratitude that I say. you will always be the only woman that I always love and always worry about forever, my last love forever, maryam.</p>
+            </div>
+        </article>
+        <button id="back-button-left" type="button">Back</button>
+    </section>
+
+    <!-- Right Choice Gallery -->
+    <section id="right-slide" class="screen hidden">
+        <h2 class="anniversary-title-slide">One Year Anniversary</h2>
+        <div class="photo-gallery">
+            <article class="photo-item">
+                <img src="./img/foto_6.jpg" alt="Memory 1" class="gallery-photo" onclick="viewImage(this)">
+                <p>It's been a year since we've been in a relationship full of laughter, love, and happiness. I'm so happy and grateful to have you by my side. Thank you for all your endless love, attention, and support. You are the best partner I could ever dream of, and I feel lucky to be able to live this life with you. I want us to always remember our initial intention to build this relationship to a more serious level and grow together. This first year is just the first step of our long journey, and my prayer for the following year is that we will continue to be together, grow, and support each other in loving each other. Until the eternal time, I hope we will continue to be side by side, go through every step with love that never fades, and build a beautiful future together. I believe our love will always be strong, and all good things will come if we continue to be together. I also want to apologize if there are any shortcomings from me. I realize that I am still far from perfect, but I promise to continue to improve myself for you and our relationship. Every day is an opportunity for me to be better, and for you, I will always try to give my best. Thank you for being patient and continuing to love me even though I still have many shortcomings. You are the reason I want to continue to grow and become the best version of myself, because our love is the biggest motivation in my life.</p>
+                
+            </article>
+        </div>
+        <button id="back-button-right" type="button">Back</button>
+    </section>
+
+    <!-- Link ke script.js -->
+    <script src="script.js" defer></script>
+</body>
+
+</html>

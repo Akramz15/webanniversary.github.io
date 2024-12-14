@@ -1,21 +1,19 @@
-/* General Styling */
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    background-color: #fef6e4; /* Warna latar belakang pastel lembut */
+    background-color: #fef6e4; 
     background-size: cover;
     background-position: center;
-    font-family: 'Poppins', sans-serif; /* Font modern untuk tampilan elegan */
+    font-family: 'Poppins', sans-serif; 
 }
 
 .container {
     text-align: center;
 }
 
-/* Screen Styles */
 .screen {
     display: none;
     text-align: center;
@@ -28,28 +26,25 @@ body {
     transform: translateY(0);
 }
 
-/* Title Styling */
 .anniversary-title {
-    font-size: 80px;  /* Ukuran font yang lebih besar untuk "Halo" */
+    font-size: 80px;  
     margin-top: -50px;
-    color: #ffffff; /* Warna coral romantis */
+    color: #ffffff; 
     font-weight: bold;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Styling untuk Judul Slide 2 dan Slide 3 */
 .anniversary-title-slide {
-    font-size: 80px;  /* Ukuran font disesuaikan dengan ukuran 'Halo' */
-    color: #ffffff;   /* Warna putih */
+    font-size: 80px;  
+    color: #ffffff;   
     font-weight: bold;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);  /* Efek bayangan agar lebih jelas */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);  
     margin-top: 20px;
     text-align: center;
 }
 
-/* Button Styles */
 button {
-    background: #f7a399; /* Soft coral */
+    background: #f7a399; 
     color: white;
     border: none;
     padding: 15px 25px;
@@ -63,10 +58,9 @@ button {
 
 button:hover {
     background: #ff6f61;
-    transform: scale(1.05); /* Efek zoom */
+    transform: scale(1.05); 
 }
 
-/* Background Controls */
 .background-controls {
     margin: 20px 0;
     text-align: center;
@@ -86,7 +80,7 @@ button:hover {
 }
 
 .bg-button {
-    background: #fef6e4; /* Pastel netral */
+    background: #fef6e4; 
     color: #333;
     border: 2px solid #f7a399;
     padding: 15px 30px;
@@ -102,13 +96,12 @@ button:hover {
     transform: scale(1.05);
 }
 
-/* Background Colors */
 .bg-button[data-bg="#ffb6c1"] {
-    background: #ffe3e3; /* Pink pastel */
+    background: #ffe3e3; 
 }
 
 .bg-button[data-bg="#f5deb3"] {
-    background: #ffe6c3; /* Cream pastel */
+    background: #ffe6c3; 
 }
 
 .bg-button[data-bg="images/background1.jpg"] {
@@ -119,59 +112,55 @@ button:hover {
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
 
-/* Styling untuk Form Input di Slide 2 */
+
 #date-form {
     margin-top: 20px;
-    padding: 30px 40px; /* Padding proporsional */
-    background: rgba(255, 255, 255, 0.9); /* Latar belakang putih dengan transparansi */
-    border-radius: 12px; /* Border melengkung */
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1); /* Bayangan lembut */
-    width: 400px; /* Lebar form tetap */
-    margin: 0 auto; /* Memposisikan form di tengah */
-    text-align: center; /* Teks di tengah */
-    display: flex; /* Flexbox untuk menyelaraskan konten */
-    justify-content: space-between; /* Menjaga jarak antara input dan tombol */
-    align-items: center; /* Memastikan elemen sejajar secara vertikal */
-    gap: 10px; /* Jarak antara input dan tombol */
-    box-sizing: border-box; /* Memastikan padding tetap dalam batas */
+    padding: 30px 40px; 
+    background: rgba(255, 255, 255, 0.9); 
+    border-radius: 12px; 
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1); 
+    width: 400px; 
+    margin: 0 auto; 
+    text-align: center; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    gap: 10px; 
+    box-sizing: border-box; 
 }
 
-/* Input Tanggal */
 #anniversary-date {
     padding: 10px 15px;
     font-size: 16px;
     border-radius: 8px;
-    flex: 1; /* Agar input tanggal memenuhi ruang yang tersedia */
+    flex: 1; 
     border: 1px solid #ddd;
     outline: none;
     background-color: #fff;
     transition: all 0.3s ease;
 }
 
-/* Tombol Kirim */
 button[type="submit"] {
-    background: #f7a399; /* Warna coral */
+    background: #f7a399; 
     color: white;
-    padding: 12px 20px; /* Ukuran tombol lebih proporsional */
+    padding: 12px 20px; 
     border: none;
-    border-radius: 8px; /* Border melengkung */
+    border-radius: 8px; 
     font-size: 16px;
     cursor: pointer;
     transition: background 0.3s ease, transform 0.3s ease;
     font-weight: bold;
 }
 
-/* Hover Efek Tombol */
 button[type="submit"]:hover {
-    background: #ff6f61; /* Warna coral lebih gelap */
-    transform: scale(1.05); /* Efek zoom */
+    background: #ff6f61; 
+    transform: scale(1.05); 
 }
 
-/* Responsif untuk perangkat kecil */
 @media screen and (max-width: 480px) {
     #date-form {
-        width: 90%; /* Form lebih ramping di perangkat kecil */
-        flex-direction: column; /* Elemen ditumpuk pada perangkat kecil */
+        width: 90%; 
+        flex-direction: column; 
     }
 
     #anniversary-date {
@@ -183,7 +172,6 @@ button[type="submit"]:hover {
     }
 }
 
-/* Styling untuk Galeri Gambar di Slide 3 */
 .photo-gallery {
     display: flex;
     justify-content: center;
@@ -193,7 +181,7 @@ button[type="submit"]:hover {
 }
 
 .photo-item {
-    width: 50%;       /* Membatasi lebar galeri agar tidak terlalu besar */
+    width: 50%;       
     margin: 10px;
 }
 
@@ -201,62 +189,54 @@ button[type="submit"]:hover {
     width: 100%;
     height: auto;
     max-width: 100%;
-    object-fit: contain; /* Menyesuaikan gambar tanpa terpotong */
+    object-fit: contain; 
 }
 
 .photo-item p {
-    max-width: 600px; /* Batas maksimal lebar teks */
-    margin: 20px auto; /* Pusatkan teks secara horizontal */
-    font-size: 18px; /* Ukuran font yang proporsional */
-    line-height: 1.8; /* Jarak antar baris untuk keterbacaan */
-    color: #ffffff; /* Warna teks putih */
-    text-align: justify; /* Membuat teks rata kanan dan kiri */
-    padding: 10px 15px; /* Ruang di sekitar teks */
-    background: rgba(0, 0, 0, 0.5); /* Latar belakang semi-transparan untuk keterbacaan */
-    border-radius: 12px; /* Sudut melengkung */
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Efek bayangan lembut */
+    max-width: 600px; 
+    margin: 20px auto; 
+    font-size: 18px; 
+    line-height: 1.8; 
+    color: #ffffff; 
+    text-align: justify; 
+    padding: 10px 15px; 
+    background: rgba(0, 0, 0, 0.5); 
+    border-radius: 12px; 
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); 
 }
 
-
 .single-photo {
-    max-width: 50%; /* Batas lebar maksimum gambar */
-    height: auto; /* Menjaga rasio aspek */
-    margin: 0 auto; /* Pusatkan gambar */
-    display: block; /* Pastikan gambar berada di tengah */
-    object-fit: contain; /* Menyesuaikan konten gambar */
-    border-radius: 12px; /* Menambahkan sudut melengkung */
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Menambahkan efek bayangan */
+    max-width: 50%; 
+    height: auto; 
+    margin: 0 auto; 
+    display: block; 
+    object-fit: contain; 
+    border-radius: 12px; 
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); 
 }
 
 .anniversary-message .message-box {
-    background-color: rgba(0, 0, 0, 0.5); /* Latar belakang transparan hitam */
-    color: white; /* Teks putih agar kontras dengan latar belakang */
-    padding: 20px; /* Memberikan jarak di dalam kotak */
-    border-radius: 10px; /* Membuat sudut kotak lebih lembut */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Memberikan bayangan halus */
-    margin-top: 50px; /* Memberikan jarak antara kotak dan elemen di atasnya */
-    margin-bottom: 25px; /* Memberikan jarak antara kotak dan elemen di bawahnya */
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: white; 
+    padding: 20px; 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+    margin-top: 50px; 
+    margin-bottom: 25px; 
 }
 
 .anniversary-message p {
-    text-align: justify; /* Mengatur teks agar rata kiri dan kanan */
-    line-height: 1.4; /* Menambah jarak antar baris untuk kenyamanan membaca */
+    text-align: justify; 
+    line-height: 1.4; 
 }
 
-
-
-/* Styling untuk semua teks putih dengan efek shadow hitam */
 body, h1, h2, h3, h4, h5, h6, p, span {
-    color: #ffffff; /* Warna teks putih */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Efek shadow hitam */
+    color: #ffffff; 
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-/* Teks "Ayo pilih yang mana dulu!" */
 .pilih-judul 
    
-
-
-/* Button Styling for Back in Slide 3 */
 #back-button-left, #back-button-right {
     background: #f7a399;
     color: white;
@@ -289,26 +269,23 @@ body, h1, h2, h3, h4, h5, h6, p, span {
     background-color: #f5a1ae;
 }
 
-/* Styling tombol "Back" */
 .back-button {
-    background: #f7a399; /* Warna soft coral */
-    color: white; /* Warna teks */
-    border: 2px solid #ffddc1; /* Border pastel */
-    padding: 12px 20px; /* Ukuran tombol */
-    border-radius: 12px; /* Sudut membulat */
-    font-size: 16px; /* Ukuran font */
-    cursor: pointer; /* Cursor pointer */
+    background: #f7a399; 
+    color: white; 
+    border: 2px solid #ffddc1; 
+    padding: 12px 20px; 
+    border-radius: 12px; 
+    font-size: 16px; 
+    cursor: pointer; 
     font-weight: bold;
     transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .back-button:hover {
-    background: #ff6f61; /* Warna coral lebih gelap */
-    transform: scale(1.05); /* Efek zoom */
+    background: #ff6f61; 
+    transform: scale(1.05); 
 }
 
-
-/* Media Query untuk Perangkat Kecil */
 @media screen and (max-width: 768px) {
     .anniversary-title, .anniversary-title-slide {
         font-size: 45px;
@@ -338,13 +315,11 @@ body, h1, h2, h3, h4, h5, h6, p, span {
     }
 }
 
-/* Mengubah gambar kanan agar memiliki ujung melengkung */
 #right-slide img {
-    border-radius: 15px; /* Ganti dengan nilai sesuai kebutuhan */
-    object-fit: cover; /* Pastikan gambar tetap proporsional */
+    border-radius: 15px; 
+    object-fit: cover; 
 }
 
-/* Media Query untuk Perangkat Sangat Kecil */
 @media screen and (max-width: 480px) {
     .anniversary-title, .anniversary-title-slide {
         font-size: 35px;
@@ -357,11 +332,10 @@ body, h1, h2, h3, h4, h5, h6, p, span {
     }
 
     .photo-item img {
-        max-height: 60vh; /* Membatasi tinggi pada layar kecil */
+        max-height: 60vh; 
     }
 }
 
-/* Styling untuk Teks Panjang di Slide 3 */
 .text-content {
     font-size: 20px;
     color: #ffffff;
@@ -374,7 +348,6 @@ body, h1, h2, h3, h4, h5, h6, p, span {
     box-sizing: border-box;
 }
 
-/* Menyesuaikan teks di perangkat kecil */
 @media screen and (max-width: 768px) {
     .text-content {
         font-size: 18px;

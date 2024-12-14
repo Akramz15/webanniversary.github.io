@@ -12,15 +12,14 @@ const chooseLeftButton = document.getElementById('choose-left-button');
 const chooseRightButton = document.getElementById('choose-right-button');
 const backButtonLeft = document.getElementById('back-button-left');
 const backButtonRight = document.getElementById('back-button-right');
-const finishButton = document.getElementById('finish-button'); // Tombol Selesai
+const finishButton = document.getElementById('finish-button'); 
 
 const bgButtons = document.querySelectorAll('.bg-button');
 
-// Variabel untuk melacak klik tombol kiri dan kanan
+
 let leftClicked = false;
 let rightClicked = false;
 
-// Switch Screen Function
 function switchScreen(from, to) {
     from.classList.remove('visible');
     from.classList.add('hidden');
@@ -28,29 +27,26 @@ function switchScreen(from, to) {
     to.classList.add('visible');
 }
 
-// Fungsi untuk mengecek apakah tombol "Selesai" bisa ditampilkan
 function checkFinishButton() {
     if (leftClicked && rightClicked) {
-        finishButton.classList.remove('hidden'); // Tampilkan tombol "Selesai"
+        finishButton.classList.remove('hidden'); 
     }
 }
 
-// Event Tombol "Selesai"
 finishButton.addEventListener('click', () => {
-    // Menampilkan konfirmasi menggunakan SweetAlert2
     Swal.fire({
         title: 'Apakah kamu yakin?',
         text: 'kamu akan menyelesaikan perayaan ini.',
         icon: 'warning',
-        showCancelButton: true, // Menampilkan tombol "Tidak"
+        showCancelButton: true,
         confirmButtonText: 'Selesai',
         cancelButtonText: 'Kembali',
         confirmButtonColor: '#28a745',
         cancelButtonColor: '#d33',
-        reverseButtons: true // Tombol "Ya" di sebelah kiri dan "Tidak" di sebelah kanan
+        reverseButtons: true 
     }).then((result) => {
+     
         if (result.isConfirmed) {
-            // Jika pengguna memilih "Ya"
             Swal.fire({
                 title: 'Terima Kasih!',
             
@@ -58,18 +54,17 @@ finishButton.addEventListener('click', () => {
                 confirmButtonText: 'Tutup',
                 confirmButtonColor: '#28a745'
             }).then(() => {
-                // Reset semua kondisi dan tampilan ke awal
+            
                 leftClicked = false;
                 rightClicked = false;
-                finishButton.classList.add('hidden'); // Sembunyikan tombol "Selesai"
+                finishButton.classList.add('hidden'); 
                 
-                // Pindah kembali ke layar awal
                 switchScreen(celebrationScreen, welcomeScreen);
-                anniversaryDate.value = ''; // Reset input tanggal
-                backgroundControls.style.display = 'block'; // Tampilkan kembali kontrol latar belakang
+                anniversaryDate.value = ''; 
+                backgroundControls.style.display = 'block'; 
             });
         } else {
-            // Jika pengguna memilih "Tidak", tetap berada di halaman perayaan
+            
             Swal.fire({
                 title: 'Kamu masih bisa melanjutkan!',
                 text: 'Silakan lanjutkan merayakan.',
@@ -81,23 +76,18 @@ finishButton.addEventListener('click', () => {
     });
 });
 
-// Start Button
 startButton.addEventListener('click', () => {
     backgroundControls.style.display = 'none';
     switchScreen(welcomeScreen, inputScreen);
 });
 
-// Form Submission
 dateForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const selectedDate = new Date(anniversaryDate.value);
-
-    // Correct anniversary date
     const correctDate = new Date('2023-12-15');
 
-    // Validasi apakah tanggal yang dimasukkan sesuai dengan tanggal anniversary yang benar
+    
     if (selectedDate.toDateString() !== correctDate.toDateString()) {
-        // SweetAlert2 untuk menampilkan error
         Swal.fire({
             title: 'Oops!',
             text: 'Ih parah kamu lupa?!!',
@@ -113,10 +103,9 @@ dateForm.addEventListener('submit', (e) => {
                 popup: 'animate__animated animate__fadeOut'
             }
         }).then(() => {
-            anniversaryDate.value = '';  // Reset input date
+            anniversaryDate.value = '';  
         });
     } else {
-        // SweetAlert2 untuk menampilkan pesan sukses
         Swal.fire({
             title: 'Selamat!',
             text: 'Yeayy! Kamu inget tanggalnya.',
@@ -132,26 +121,23 @@ dateForm.addEventListener('submit', (e) => {
                 popup: 'animate__animated animate__fadeOut'
             }
         }).then(() => {
-            // Pindah ke layar perayaan
             switchScreen(inputScreen, celebrationScreen);
         });
     }
 });
 
-// Left and Right Choice Buttons
 chooseLeftButton.addEventListener('click', () => {
-    leftClicked = true; // Set leftClicked menjadi true
-    checkFinishButton(); // Cek apakah tombol selesai bisa ditampilkan
+    leftClicked = true; 
+    checkFinishButton(); 
     switchScreen(celebrationScreen, leftSlide);
 });
 
 chooseRightButton.addEventListener('click', () => {
-    rightClicked = true; // Set rightClicked menjadi true
-    checkFinishButton(); // Cek apakah tombol selesai bisa ditampilkan
+    rightClicked = true; 
+    checkFinishButton(); 
     switchScreen(celebrationScreen, rightSlide);
 });
 
-// Back Buttons
 backButtonLeft.addEventListener('click', () => {
     switchScreen(leftSlide, celebrationScreen);
 });
@@ -160,7 +146,6 @@ backButtonRight.addEventListener('click', () => {
     switchScreen(rightSlide, celebrationScreen);
 });
 
-// Background Change
 bgButtons.forEach((button) => {
     button.addEventListener('click', () => {
         const bgValue = button.dataset.bg;

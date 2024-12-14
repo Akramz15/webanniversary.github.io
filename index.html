@@ -10,17 +10,13 @@
     <meta name="author" content="Your Name">
     <title>Anniversary Project</title>
     <link rel="stylesheet" href="style.css">
-    <!-- SweetAlert2 Library -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 </head>
 
 <body>
-    <!-- Welcome Screen -->
     <section id="welcome-screen" class="screen visible">
         <h1 class="anniversary-title">Happy Anniversary!</h1>
-
-        <!-- Background Selection Controls -->
         <div id="background-controls" class="background-controls">
             <h3>Pilih Background:</h3>
             <div class="background-options">
@@ -29,12 +25,9 @@
                 <button class="bg-button" data-bg="./img/foto_4.jpg" type="button">Background 3</button>
             </div>
         </div>
-
-        <!-- Start Button -->
         <button id="start-button" type="button">Mulai</button>
     </section>
 
-    <!-- Slide 2 - Form untuk Tanggal Anniversary -->
     <section id="input-screen" class="screen hidden">
         <h1 class="anniversary-title-slide">Masukkan Tanggal Anniversary</h1>
         <form id="date-form">
@@ -44,7 +37,6 @@
         <p id="congratulation-message" class="hidden" aria-live="polite"></p>
     </section>
 
-    <!-- Slide 3 - Celebration Screen -->
     <section id="celebration-screen" class="screen hidden">
         <h2 class="anniversary-title-slide">Hi Sayang</h2>
         <p>Ayo pilih yang mana dulu!</p>
@@ -52,7 +44,6 @@
             <button id="choose-left-button" class="arrow-button" type="button">&#8592;</button>
             <button id="choose-right-button" class="arrow-button" type="button">&#8594;</button>
         </div>
-        <!-- Tombol Selesai -->
         <button id="finish-button" type="button" class="hidden">Selesai</button>
     </section>
 
@@ -94,9 +85,6 @@
         <button id="back-button-right" type="button">Back</button>
     </section>
 
-
-
-    <!-- Link ke script.js -->
     <script src="script.js" defer></script>
 </body>
 
